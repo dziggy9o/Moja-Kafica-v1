@@ -1,0 +1,183 @@
+@import 'varijable.scss';
+
+@keyframes checked-anim {
+    50% {
+        width: 3000px;
+        height: 3000px;
+        background-color: black;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        background: url(/img/bg.jpg) center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
+@keyframes not-checked-anim {
+    0% {
+        width: 3000px;
+        height: 3000px;
+    }
+}
+@keyframes proba {
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.mklink li, a {
+    
+    color: $zlatna;
+    font: 14pt "Roboto", sans-serif;
+    font-weight: 700;
+    line-height: 1.8;
+    text-decoration: none;
+    text-transform: none;
+    list-style: none;
+    outline: 0;
+    display: none;
+}
+.mklink li {
+    height: 25%;
+    }
+.mklink a:focus {
+    display: block;
+    color: #333;
+    background-color: #eee;
+    transition: all .5s;
+}
+
+
+#trigger, #burger, #burger:before, #burger:after {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: white;
+    width: 30px;
+    height: 5px;
+    transition: .2s ease;
+    cursor: pointer;
+    z-index: 9999;
+}
+#trigger {
+    height: 25px;
+    background: none;
+}
+#burger:before {
+    content: " ";
+    top: 23px;
+    //left: 0;
+}
+#burger:after {
+    content: " ";
+    top: 31px;
+    //left: 0;
+}
+#menu-toggle:checked + #trigger + #burger {
+    top: 35px;
+    transform: rotate(180deg);
+    transition: transform .2s ease;
+    height: 10px;
+}
+
+#menu-toggle:checked + #trigger + #burger:before {
+    width: 30px;
+    height: 10px;
+    top: -11px;
+    right: 8px;
+    transform: rotate(-45deg) translateX(-5px);
+    transition: transform .2s ease;
+    background: $zlatna;
+    
+}
+#menu-toggle:checked + #trigger + #burger:after {
+    height: 10px;
+    width: 30px;
+    top: 11px;
+    right: 8px;
+    transform: rotate(45deg) translateX(-5px);
+    transition: transform .2s ease;
+    background: $zlatna;
+    
+}
+#menu {
+    position: fixed;
+    margin: 0; padding: 0;
+    right: 0;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    background-color: $primarna;
+    border-bottom-left-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    animation: not-checked-anim .2s both;
+    transition: .2s;
+    z-index: 25;
+    border-bottom: 4px solid $zlatna; 
+}
+.mklink {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    text-align: center;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 100%;
+    padding: 30px;
+    overflow: hidden;
+    padding: 30px;
+    margin-top: 50px;
+    border: 6px solid $zlatna;
+    opacity: 0;
+    border-top-width: 0;
+    border-left-width: 0;
+    margin-top: 10%;
+  
+    
+}
+@media screen and (max-width: 767px) {
+    .mklink {
+        margin-top: 30%;
+    }
+  }
+#menu-toggle:checked + #trigger + #burger + #menu {
+    animation: checked-anim 1s ease both;
+    
+    
+}
+#menu-toggle:checked + #trigger ~ #menu div > li, a {
+    display: block;
+}
+#menu-toggle:checked + #trigger ~ #menu > .mklink {
+    animation: proba 1s ease both;
+}
+#menu-toggle:checked + #trigger ~ #burger {
+    background: $zlatna;
+    
+}
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    display: none;
+}
+#Logo {
+    position: fixed;
+    margin: 0; padding: 0;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    z-index: 27;
+    background-color: $primarna;
+    border-bottom-right-radius: 100%;
+    border-bottom: 4px solid $zlatna;
+    svg {
+        fill: white;
+          height: 115px;
+          width: 115px;
+          position: absolute;
+          top: -22px;
+          left: -14px;
+    }
+}

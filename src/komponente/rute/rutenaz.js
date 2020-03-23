@@ -1,0 +1,6 @@
+export const POCETNA = '/'
+export const ONAMA = '/onama'
+export const PROIZVODI = '/proizvodi'
+export const TRADICIONALNA = '/tradicionalna-kafa'
+export const INSTANT = '/instant-kafa'
+export const KONTAKT = '/kontakt'
