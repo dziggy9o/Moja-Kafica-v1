@@ -1,0 +1,98 @@
+@import 'varijable.scss';
+
+#onama {
+    width: 80%;
+    height: 500px;
+    margin: 80px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+    display: flex;
+    border: 2px solid $zlatna;
+    box-shadow: 3px 1px 10px rgba(0, 0, 0, 0.5);
+    .mk-sd-levo {
+        position: relative;
+        display: inline-block;
+        width: 55%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        color: white;
+        padding: 20px;
+        h1 {
+            color: $zlatna;
+            font-size: 3em;
+            line-height: 1.5em;
+        }
+        p {
+            text-align: justify;
+            br {
+                display: block;
+                margin-bottom: 20px;
+                line-height:20px;
+                content: '';
+            }
+
+        }
+    }
+    .mk-sd-desno {
+        position: relative;
+        display: inline-block;
+        width: 45%;
+        height: 100%;
+        background: url(/img/slajder/sldbg.jpg) center no-repeat;
+        background-size: 170% 100%;
+        background-attachment: scroll;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #onama {
+        height: 540px;
+        .mk-sd-desno {
+            background-size:cover;
+        }
+    }
+}
+@media screen and (max-width: 900px) {
+    #onama {
+        .mk-sd-levo {
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                br {
+                    margin-bottom: 5px;
+                    line-height: 5px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 790px) {
+    #onama {
+        height: auto;
+        display: block;
+        background: rgba(0, 0, 0, 0.85);
+        .mk-sd-levo {
+            margin-top: 183px;
+            display: block;
+            width: 100%;
+            background: transparent;
+            z-index: 1;
+        }
+        .mk-sd-desno {
+            width: 100%;
+            height: 250px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-bottom: 2px solid $zlatna;
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    #onama {
+        width: 100%;
+    }
+}

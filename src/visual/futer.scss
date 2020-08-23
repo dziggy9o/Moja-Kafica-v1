@@ -1,0 +1,102 @@
+@import 'varijable.scss';
+
+
+footer
+{   
+    position: relative;
+    display: block;
+    color: white;
+    font: 14pt "Roboto", sans-serif;
+    width: 100%;
+    font-weight: 700;
+    line-height: 1.8;
+    
+    > div {
+        position: absolute;
+        top: 40px;
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 30%, rgba(0,0,0,1) 100%);
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 5px;
+        p {
+            width: 40%;
+            margin: auto;
+            display: flex;
+            padding-left: 30px;
+            a {
+                padding-left: 5px;
+                &:hover {
+                    text-decoration: none;
+                    color: $primarna;
+                }
+                .cms {
+                    width: 50px;
+                    height: 50px;
+                    background: url('/img/cms-w.svg') no-repeat;
+                    margin-top: 7px;
+                    &:hover {
+                        background: url('/img/cms-org.svg') no-repeat;
+                    }
+                }
+            }
+            svg {
+                margin-top: -15px;
+                width: 60px;
+                height: 60px;
+                fill: white;
+                margin-left: 5px;
+                margin-right: 5px;
+                border-radius: 100px;
+                border: 2px solid rgba(0,0,0,0);
+                &:hover {
+                border-color: $zlatna;
+                fill: $zlatna;
+                }
+            }
+        }
+    }
+   
+
+    &:before {
+        content: url(/img/flinija.svg); width: 200px; height: 200px;
+    }
+   
+}
+@media screen and (max-width: 767px) {
+    footer {
+        font-size: 10pt;
+        > div {
+            top: 10px;
+            p {
+                padding-left: 20px;
+                width: 100%;
+                a {
+                    .cms {
+                        margin-top: 3px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1130px) {
+    footer {
+        > div p {
+            width: 50%;
+        }
+    }
+}
+@media screen and (max-width: 910px) {
+    footer {
+        > div p {
+            width: 60%;
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    footer {
+        > div p {
+            width: 100%;
+        }
+    }
+}

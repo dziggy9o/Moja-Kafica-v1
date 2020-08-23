@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 export const Tekst = (props) => (
     <div className='product-slider'>
@@ -22,19 +23,9 @@ export const Slika = (props) => (
 )
 
 export const Slajderi = (props) => (
-    <div className='slajd'>
-    <h1 className="product-slider__title">
-    {props.Naslov} <br/>
-    {props.Podnaslov}
-    </h1>
-    <div className="product-ctr">
-    <div className="product-labels">
-    <div className="product-labels__title">{props.Tekst}</div>
+    <div className='mk-slajd'>
+    <h1>{props.Naslov}</h1>
+    <p>{props.Tekst}</p>
+    <Link to={props.link}>Naši proizvodi</Link>
     </div>
-</div>
-<a href='https://mojakafica.rs' target='_blank' rel="noopener noreferrer">
-    Naši proizvodi
-</a>
-
-</div>
 )

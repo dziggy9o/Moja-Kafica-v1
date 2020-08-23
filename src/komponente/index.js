@@ -6,3 +6,9 @@ export {Meni} from './meni'
 export {PocetnaSlajder} from './slajder'
 //Rute
 export {Rute} from './rute'
+//Futer
+export {Futer} from './footer'
+//Stranice
+export {TradicionalnaKafa, InstantKafa, Kontakt, Onama} from './stranice'
+//Kafa template
+export {Kafa} from './kafa'

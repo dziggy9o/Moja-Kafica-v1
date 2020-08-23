@@ -42,8 +42,20 @@
     display: none;
 }
 .mklink li {
-    height: 25%;
+    height: 20%;
     }
+.mklink a {
+    width: 75%;
+    margin: auto;
+    color: white;
+    border-radius: 20px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    &:hover {
+        text-decoration: none;
+        border-color: $zlatna;
+        color: $zlatna;
+    }
+}
 .mklink a:focus {
     display: block;
     color: #333;
@@ -77,14 +89,14 @@
     top: 31px;
     //left: 0;
 }
-#menu-toggle:checked + #trigger + #burger {
+#menu-toggle.cekirano + #trigger + #burger {
     top: 35px;
     transform: rotate(180deg);
     transition: transform .2s ease;
     height: 10px;
 }
 
-#menu-toggle:checked + #trigger + #burger:before {
+#menu-toggle.cekirano + #trigger + #burger:before {
     width: 30px;
     height: 10px;
     top: -11px;
@@ -94,7 +106,7 @@
     background: $zlatna;
     
 }
-#menu-toggle:checked + #trigger + #burger:after {
+#menu-toggle.cekirano + #trigger + #burger:after {
     height: 10px;
     width: 30px;
     top: 11px;
@@ -121,7 +133,7 @@
 }
 .mklink {
     width: 300px;
-    height: 300px;
+    
     margin: auto;
     text-align: center;
     background-color: rgba(0,0,0,0.8);
@@ -143,18 +155,16 @@
         margin-top: 30%;
     }
   }
-#menu-toggle:checked + #trigger + #burger + #menu {
-    animation: checked-anim 1s ease both;
-    
-    
+#menu-toggle.cekirano + #trigger + #burger + #menu {
+    animation: checked-anim 1s ease both;  
 }
-#menu-toggle:checked + #trigger ~ #menu div > li, a {
+#menu-toggle.cekirano + #trigger ~ #menu div > li, a {
     display: block;
 }
-#menu-toggle:checked + #trigger ~ #menu > .mklink {
+#menu-toggle.cekirano + #trigger ~ #menu > .mklink {
     animation: proba 1s ease both;
 }
-#menu-toggle:checked + #trigger ~ #burger {
+#menu-toggle.cekirano + #trigger ~ #burger {
     background: $zlatna;
     
 }

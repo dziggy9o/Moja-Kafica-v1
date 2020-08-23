@@ -1,0 +1,295 @@
+@import 'varijable.scss';
+
+#kontakt {
+    width: 80%;
+    height: 500px;
+    margin: 80px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+    display: flex;
+    border: 2px solid $zlatna;
+    box-shadow: 3px 1px 10px rgba(0, 0, 0, 0.5);
+    
+    .mk-sd-levo {
+        position: relative;
+        display: inline-block;
+        width: 65%;
+        height: 100%;
+        background: url(/img/kontaktbg.jpg) center no-repeat;
+        background-size: cover;
+        background-attachment: scroll;
+        .gradijent {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(80deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.7) 30%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.0) 100%);
+            .logokontakt {
+                background: url("/img/slajder/fleka.png") center no-repeat;
+                background-size: 70% 65%;
+                padding: 5px 40px;
+                z-index: 1;
+                position: absolute;
+                top: 30%;
+                left: 30%;
+                svg {
+                    margin-top: -10px;
+                    width: 100%;
+                    height: 100%;
+                    fill: $zlatna;
+                    
+                }
+            }
+            .informacije {
+                position: absolute;
+                bottom: 5%;
+                left: 5%;
+                z-index: 2;
+                .ipolje {
+                    display: block;
+                    margin-bottom: 5px;
+                    
+                    padding: 5px;
+                    svg {
+                        display: inline-block;
+                        color: $zlatna;
+                        font-size: 1.3em;
+                        margin-right: 10px;
+                        
+                    }
+                    a {
+                        font-size: 1em;
+                        display: inline-block;
+                        color: $zlatna;
+                        svg {
+                            &:hover {
+                                color: white;
+                            }
+                        }
+                        &:hover {
+                            color: white;
+                            text-decoration: none;
+                        }
+                    }
+                    h4 {
+                        display: block;
+                        color: $zlatna;
+                        font-weight: bold;
+                        margin: 0;
+                    }
+                    h5 {
+                        font-weight: 700;
+                        display: block;
+                        color: white;
+                    }
+                    h6 {
+                        color: white;
+                        font-size: .9em;
+                        margin: 0px;
+                        &:before {
+                            content: '-';
+                            margin-right: 5px;
+                        }
+                        &:after {
+                            content: '-';
+                            margin-left: 5px;   
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    .mk-sd-desno {
+        position: relative;
+        display: inline-block;
+        width: 35%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        h1 {
+            color: white;
+            font-size: 2em;
+            line-height: 2em;
+            text-align: center;
+        }
+        .mk-forma {
+            .mk-forma-sadrzaj {
+                label {
+                    color: white;
+                    display: block;
+                    margin-top: .5rem;
+                    h5 {
+                        color: $primarna;
+                        display: inline;
+                        font-weight: bold;
+                        font-size: 1em;
+                        line-height: 1.1em;
+                    }
+                }
+                input, textarea {
+                    background-color: black;
+                    color: white;
+                    width: 100%;
+                    border-radius: 5px;
+                    border: 2px solid $zlatna;
+                    &:focus {
+                        outline-color: $zlatna;
+                    }
+                }
+                textarea {
+                    resize: none;
+                }
+            
+            
+            }
+            .mk-forma-dugme {
+                
+                list-style-type: none;
+                margin-block-start: 0em;
+                margin-block-end: 0em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                padding-inline-start: 0px;
+                display: flex;
+                margin-top: 20px;
+                li {
+                    display: inline-block;
+                    margin: 0px auto;
+                    width: 45%;
+                    input {
+                        width: 100%;
+                        border-radius: 100px;
+                        border: 2px solid $zlatna;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        color: white;
+                        font-weight: 700;
+                        &:focus {
+                            outline-width: 0px;
+                        }
+                        &:hover {
+                            color: $zlatna;
+                        }
+
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #kontakt {
+        .mk-sd-desno {
+            h1 {
+                font-size: 1.5em;
+            }
+            .mk-forma {
+                .mk-forma-dugme {
+                    li {
+                        input {
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+@media screen and (max-width: 800px) {
+    #kontakt {
+        height: auto;
+        display: block;
+        background: rgba(0, 0, 0, 0.8);
+        .mk-sd-levo {
+            height: auto;
+            width: 100%;
+            border-bottom: 2px solid $zlatna;
+            .gradijent {
+                .logokontakt {
+                    display: none;
+                }
+                .informacije {
+                    margin-top: 50px;
+                    position: relative;
+                    display: inline-block;
+                    bottom: 0;
+                    left: 0;
+                    .ipolje {
+                        background: url("/img/slajder/fleka.png") center no-repeat;
+                        background-size: 100% 105%;
+                        text-align: center;
+                        width: 33%;
+                        display: inline-block; 
+                        vertical-align: top;
+                        &:nth-of-type(4) {
+                            margin-top: -80px;
+                        }                        
+                        h4 {
+                            font-size: 1.3rem;
+                        }
+                        br {
+                            content: '';
+                            margin-bottom: 10px;
+                            line-height: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .mk-sd-desno {
+            width: 100%;
+            h1 {
+                font-size: 1.5em;
+            }
+            .mk-forma {
+                .mk-forma-dugme {
+                    li {
+                        input {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    #kontakt {
+        width: 100%;
+        border-radius: 0px;
+        .mk-sd-levo {
+            .gradijent {
+                .informacije {
+                    .ipolje {
+                        width: 50%;
+                        &:nth-of-type(4) {
+                            margin-top: 0;
+                            width: 100%;
+                        }
+                        &:nth-of-type(3) {
+                            margin-top: -60px;
+                        }
+
+                    }
+                }
+            }
+
+        }
+    }}
+    @media screen and (max-width: 400px) {
+        #kontakt {
+            .mk-sd-desno {
+                .mk-forma {
+                    .mk-forma-dugme {
+                        li {
+                            input {
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }}

@@ -1,21 +1,4 @@
 @import 'varijable.scss';
-@import url("https://fonts.googleapis.com/css?family=Dosis:400,600,700,800");
-@font-face {
-  font-family: 'Uni Sans';
-  src: url("https://res.cloudinary.com/muhammederdem/raw/upload/v1536168547/unisans-font/UniSansHeavyCAPS.woff2") format("woff2"), url("https://res.cloudinary.com/muhammederdem/raw/upload/v1536168547/unisans-font/UniSansHeavyCAPS.woff") format("woff"), url("https://res.cloudinary.com/muhammederdem/raw/upload/v1536168548/unisans-font/UniSansHeavyCAPS.ttf") format("truetype");
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Uni Sans';
-  src: url("https://res.cloudinary.com/muhammederdem/raw/upload/v1536168545/unisans-font/UniSansThinCAPS.woff2") format("woff2"), url("https://res.cloudinary.com/muhammederdem/raw/upload/v1536168545/unisans-font/UniSansThinCAPS.woff") format("woff"), url("https://res.cloudinary.com/muhammederdem/raw/upload/v1536168548/unisans-font/UniSansThinCAPS.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-body {
-  font-family: 'Uni Sans', sans-serif;
-  font-weight: 500;
-}
 
 * {
   box-sizing: border-box;
@@ -40,9 +23,9 @@ a {
 
 .mkwrapper {
   width: 100%;
-  height: 100vh;
+  //height: 100vh;
   min-height: 750px;
-    margin-top: 20px;
+    margin-top: 80px;
   position: relative;
   //overflow: auto;
   display: block;
@@ -282,7 +265,7 @@ a {
 @media screen and (max-width: 576px) {
   .product-slider {
     width: 85%;
-    margin-top: 130px;
+    margin-top: 380px;
   }
 }
 .product-slider__wrp {
@@ -363,21 +346,12 @@ a {
 .product-slider__card {
   height: 100%;
   display: block;
-  align-items: center;
+  //align-items: center;
   width: 100%;
   transition: all .5s;
   overflow: hidden;
   position: relative;
   border-radius: 30px;
-}
-@media screen and (max-width: 992px) {
-    .product-slider__content.active  {
-        display:block;
-    }
-    .product-slider__content {
-        display:none;
-    }
-  
 }
 @media screen and (max-width: 767px) {
   .product-slider__card {
@@ -433,6 +407,7 @@ a {
     padding-top: 220px;
     padding-left: 15px;
     padding-right: 15px;
+    height: 800px;
   }
 }
 .product-slider__title {
@@ -557,7 +532,7 @@ a {
   display: block;
   align-items: center;
   min-height: 150px;
-  margin-top: 40px;
+  margin-top: 20px;
   opacity: 0;
   transform: translateY(55px);
   transition: all .5s;
@@ -580,7 +555,7 @@ a {
   .product-ctr {
     justify-content: center;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -685,6 +660,12 @@ a {
     left: 20%;
   }
 }
+.mojakafica-sadrzaj-inner {
+  position: relative!important;
+}
+.mojakafica-sadrzaj {
+  height: 100%;
+}
 @media screen and (max-width: 992px) {
   .product-img {
     width: 430px;
@@ -783,3 +764,177 @@ a.mojakafica-control-next {
     position: absolute;
     top: 20px;
 }
+.product-slider__card {
+  .carousel {
+    color:white;
+    height: 100%;
+    .carousel-inner {
+      height: 100%;
+      .carousel-item {
+        text-align: center;
+        .mk-slajd {
+          width:80%;
+          margin: 5% auto;
+          position: relative;
+          text-align: center;
+          h1 {
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15%;
+          }
+          p {
+            background: url("/img/slajder/fleka.png") center no-repeat;
+            background-size: 75% 105%;
+            text-align: center;
+            padding: 0 20%;
+            font-size: 1.4em;
+          }
+
+          a {
+            width: 200px;
+            margin: 20px auto;
+            color:white;
+            margin-top: 20px;
+            border-radius: 100px;
+            border: 2px solid #CCAA63;
+            background-color: rgba(0, 0, 0, 0.5);
+            &:hover {
+              background-color: rgba(0, 0, 0, 1);
+              color: $zlatna;
+              text-decoration: none;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .product-slider__card {
+      margin-top: 5%;
+    .carousel {
+      color:white;
+      height: 100%;
+      .carousel-inner {
+        height: 100%;
+        .carousel-item {
+          text-align: center;
+          .mk-slajd {
+            height: 350px;
+            width:100%;
+            margin: 5% auto;
+            position: relative;
+            h1 {
+              background: url("/img/slajder/fleka.png") center no-repeat;
+              background-size: 75% 105%;
+              margin-top: 37%;
+              margin-bottom: 5%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+@media screen and (max-width: 767px) {
+  .product-slider__card {
+      margin-top: -5%;
+    .carousel {
+      color:white;
+     
+      .carousel-inner {
+        height: 100%;
+        .carousel-item {
+          text-align: center;
+          .mk-slajd {
+            height: 350px;
+            width:100%;
+            margin: 5% auto;
+            position: relative;
+            h1 {
+              background: url("/img/slajder/fleka.png") center no-repeat;
+              background-size: 75% 105%;
+              margin-top: 37%;
+              margin-bottom: 5%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+@media screen and (max-width: 576px) {
+  .mkwrapper {
+    margin-top: 30px;
+    .content { margin-top: 0px;
+      .bg-shape {
+        width: 70%;
+        border-radius: 0;
+        border-top-left-radius: 1000px;
+        border-top-right-radius: 1000px;
+      }
+      .product-slider {
+        width: 90%;
+        border-radius: 0px;
+        
+      }
+    }
+  }
+  .product-slider__card {
+      margin-top: -40%;}
+  }
+  @media screen and (max-width: 414px) {
+    .product-slider {
+      margin-top: 360px;
+      .product-slider__item {
+        .product-slider__card {
+          height: 610px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 376px) {
+    .product-slider {
+      margin-top: 105px;
+      .product-slider__item {
+        .product-slider__card {
+          height: auto;
+        }
+      }
+      
+    }
+    .product-slider__card {
+        margin-top: 25%;
+      .carousel {
+        color:white;
+        height: 100%;
+        .carousel-inner {
+          height: 100%;
+          .carousel-item {
+            text-align: center;
+            .mk-slajd {
+              
+              width:100%;
+              margin: 10% auto;
+              position: relative;
+              h1 {
+                background: url("/img/slajder/fleka.png") center no-repeat;
+                background-size: 75% 105%;
+                margin-top: 130px;
+                margin-bottom: 5%;
+                font-size: 2em;
+              }
+              p {
+                font-size: 1.1em;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+  }
